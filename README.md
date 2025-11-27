@@ -1,3 +1,5 @@
+VIVIAN NASCIMENTO SILVA AMORIM	RM565078
+
 # Maria assistente inteligente 
 
 # Objetivo 

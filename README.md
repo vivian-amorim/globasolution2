@@ -15,6 +15,10 @@ Automação de Decisão	        Estruturas Condicionais (IF/ELSE)	              
 Arquitetura	                  POO (Classes), Design Tecnológico	                  Estrutura modular da aplicação e mockups de interface (Dashboards).
 
 # Dados de simulação
+import pandas as pd
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
+# Dados de simulação
 data = {
     'comunicacao_dia': ["Reunião de emergência às 21h, sem almoço.", "Projeto entregue com sucesso!"],
     'frequencia_reunioes': [5, 2],
@@ -24,16 +28,13 @@ df = pd.DataFrame(data)
 sid = SentimentIntensityAnalyzer()
 
 def calcular_ir_simplificado(row):
-    # Risco Sentimento: (1 - S_sentimento) * Peso
+    Risco Sentimento: (1 - S_sentimento) * Peso
     risco_sentimento = 1.0 - (sid.polarity_scores(row['comunicacao_dia'])['compound'] + 1) / 2
-    
-    # Risco Reuniões (Normalizado)
+    Risco Reuniões (Normalizado)
     risco_reunioes = min(row['frequencia_reunioes'] / 8.0, 1.0)
     risco_noite = min(row['horas_noturnas'] / 4.0, 1.0)
-    
-    # Cálculo Ponderado (IR)
+    Cálculo Ponderado (IR)
     IR = (-0.4 * risco_sentimento) + (0.3 * risco_reunioes) + (0.3 * risco_noite)
-    
     return max(0, min(IR + 0.5, 1.0)) # Ajuste para range [0, 1]
 
 df['IR'] = df.apply(calcular_ir_simplificado, axis=1)

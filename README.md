@@ -1,4 +1,4 @@
-# globasolution2
+# Maria assistente inteligente 
 
 # Objetivo 
 A Maria assistente inteligente e não intrusivo focado em prevenir a exaustão e promover o bem-estar no ambiente de trabalho remoto e híbrido. monitora o bem-estar cognitivo dos colaboradores de forma ética e não intrusiva, promovendo intervenções proativas para prevenir o burnout e garantir a sustentabilidade do capital humano.

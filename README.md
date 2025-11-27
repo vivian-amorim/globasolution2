@@ -72,3 +72,5 @@ O design da Maria foca em clareza e ação, utilizando o IR para guiar a interfa
 Dashboard Colaborador: Visualiza o IR em um medidor colorido (Verde/Amarelo/Vermelho) com botões de ação (Bloquear Agenda / Sugerir Pausa).
 Dashboard Gerencial: Apresenta um Mapa de Calor de Risco (Anonimizado) para identificar clusters de sobrecarga na equipe e sugere a redistribuição de tarefas (inclusão).
 
+Link: https://colab.research.google.com/drive/1pd45dlEKl33o9PjvM0HoK0cErC2R13MM#scrollTo=BRpmC3rVspsg 
+

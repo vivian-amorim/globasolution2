@@ -37,7 +37,6 @@ def calcular_ir_simplificado(row):
     return max(0, min(IR + 0.5, 1.0)) # Ajuste para range [0, 1]
 
 df['IR'] = df.apply(calcular_ir_simplificado, axis=1)
-
 print(df[['frequencia_reunioes', 'horas_noturnas', 'IR']])
 
 # Resultado: Dia 1 (Alto IR), Dia 2 (Baixo IR)
